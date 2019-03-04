@@ -33,7 +33,7 @@ const tokenResponse = {
 module.exports = {
   guardianLogin: {
     method: 'POST',
-    path: '/{{mount_point}}{{^mount_point}}guardian{{/mount_point}}/login/',
+    path: '/{{mount_point}}{{^mount_point}}guardian{{/mount_point}}/login',
     tokenSource: true,
     schema: {
       req: {
@@ -53,7 +53,7 @@ module.exports = {
   },
   guardianSign: {
     method: 'POST',
-    path: '/{{mount_point}}{{^mount_point}}guardian{{/mount_point}}/sign/',
+    path: '/{{mount_point}}{{^mount_point}}guardian{{/mount_point}}/sign',
     schema: {
       req: {
         type: 'object',

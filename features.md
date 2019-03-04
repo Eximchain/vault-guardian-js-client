@@ -4,12 +4,12 @@
 
 ## vault.guardianLogin
 
-`POST /{{mount_point}}{{^mount_point}}guardian{{/mount_point}}/login/`
+`POST /{{mount_point}}{{^mount_point}}guardian{{/mount_point}}/login`
 
 
 ## vault.guardianSign
 
-`POST /{{mount_point}}{{^mount_point}}guardian{{/mount_point}}/sign/`
+`POST /{{mount_point}}{{^mount_point}}guardian{{/mount_point}}/sign`
 
 
 ## vault.unwrap
