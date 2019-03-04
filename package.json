@@ -1,6 +1,6 @@
 {
   "name": "@eximchain/guardian-client",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "js client for vault guardian key management system",
   "main": "index.js",
   "scripts": {
