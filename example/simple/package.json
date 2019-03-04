@@ -9,6 +9,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@eximchain/guardian-client": "^0.1.1"
+    "@eximchain/guardian-client": "^0.1.2"
   }
 }

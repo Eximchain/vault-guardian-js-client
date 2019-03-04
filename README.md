@@ -6,20 +6,23 @@ A client for the HTTP API of Eximchain's [Guardian] written for
 ## install
 make sure to use node.js version >= 6
 
-    npm install vault-guardian-js-client
+    npm i @eximchain/guardian-client
 
 ## usage
 
 ### init 
 ```javascript
+
+process.env.DEBUG = 'node-vault'; // switch on debug mode
+
 var options = {
   apiVersion: 'v1', // default
-  endpoint: 'http://127.0.0.1:8200', // default
-  token: '1234' // optional client token; can be fetched after valid initialization of the server
+  endpoint: 'http://guardian-test-2.eximchain-dev.com', // default
 };
-
+ 
 // get new instance of the client
-var client = require("vault-guardian-js-client")(options);
+var client = require("@eximchain/guardian-client")(options);
+
 ```
 
 ### Authenticate and sign with your secp256-k1 key
@@ -28,7 +31,7 @@ var client = require("vault-guardian-js-client")(options);
 
 const username = 'me';
 const password = 'foo';
-client.guardianLogin({ username, password }))
+client.guardianLogin({ username, password })
 .then( (token) => client.token = token )
 .then( () => return client.guardianSign('0x7FFFFFFF'))
 .then( (signature) => console.log(signature))
