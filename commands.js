@@ -39,14 +39,14 @@ module.exports = {
       req: {
         type: 'object',
         properties: {
-          username: {
+          okta_username: {
             type: 'string',
           },
-          password: {
+          okta_password: {
             type: 'string',
           },
         },
-        required: ['username', 'password'],
+        required: ['okta_username', 'okta_password'],
       },
       res: tokenResponse,
     },
@@ -58,11 +58,11 @@ module.exports = {
       req: {
         type: 'object',
         properties: {
-          token: {
+          raw_data: {
             type: 'string',
           },
         },
-        required: ['token'],
+        required: ['raw_data'],
       },
       res: {
         type: 'object',
