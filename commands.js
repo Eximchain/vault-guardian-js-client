@@ -73,6 +73,9 @@ module.exports = {
               signature: {
                 type: 'string',
               },
+              fresh_client_token:{
+                type: 'string',
+              }
             },
           },
         },

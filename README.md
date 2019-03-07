@@ -29,12 +29,16 @@ var client = require("@eximchain/guardian-client")(options);
 
 ```javascript
 
-const username = 'me';
-const password = 'foo';
-client.guardianLogin({ username, password })
-.then( (token) => client.token = token )
-.then( () => return client.guardianSign('0x7FFFFFFF'))
-.then( (signature) => console.log(signature))
+
+const okta_username = 'foo@bar.com';
+const okta_password = 'foobar!';
+client.guardianLogin({ okta_username, okta_password })
+.then((res) => client.token = res.data.client_token)
+.then( () => {
+  return client.guardianSign({raw_data:'26f0b296d44a09ef6135670c72fca7c6514a363512166d90a83df25a06f3dcb1'})
+})
+.then( (res) => client.token = res.data.fresh_client_token)
+.then(() => console.log(client.token))
 .catch(console.error);
 ```
 
